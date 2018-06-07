@@ -3,7 +3,7 @@ from .models import Question, Answer
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ["title", "added_add", "rating"]
+    list_display = ["title", "added_at", "rating"]
     # inlines = (FieldMappingInline)
     # fields = []
     # exclude = ["type"]
@@ -15,7 +15,7 @@ class QuestionAdmin(admin.ModelAdmin):
 admin.site.register(Question, QuestionAdmin)
 
 class AnswerAdmin(admin.ModelAdmin):
-    list_display = ["added_add"]
+    list_display = ["added_at"]
     # inlines = (FieldMappingInline)
     # fields = []
     # exclude = ["type"]
